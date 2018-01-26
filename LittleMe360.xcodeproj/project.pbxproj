@@ -15,6 +15,8 @@
 		29E899A820178C600000BCF3 /* LittleMe360.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29E899A620178C600000BCF3 /* LittleMe360.xcdatamodeld */; };
 		29E899AA20178C600000BCF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E899A920178C600000BCF3 /* Assets.xcassets */; };
 		29E899AD20178C600000BCF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E899AB20178C600000BCF3 /* LaunchScreen.storyboard */; };
+		44EC062120195AE200C8AC94 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 44EC062020195AE200C8AC94 /* SqueezeNet.mlmodel */; };
+		44EC062320195CC100C8AC94 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 44EC062220195CC100C8AC94 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		29E899A920178C600000BCF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29E899AC20178C600000BCF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29E899AE20178C600000BCF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44EC062020195AE200C8AC94 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		44EC062220195CC100C8AC94 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +66,13 @@
 			children = (
 				29E8999F20178C600000BCF3 /* AppDelegate.swift */,
 				29E899A120178C600000BCF3 /* ViewController.swift */,
+<<<<<<< Updated upstream
 				293E3DAB2018DAB200BB2A5A /* SqueezeNet.mlmodel */,
 				293E3DAD2018E42100BB2A5A /* Resnet50.mlmodel */,
+=======
+				44EC062020195AE200C8AC94 /* SqueezeNet.mlmodel */,
+				44EC062220195CC100C8AC94 /* Resnet50.mlmodel */,
+>>>>>>> Stashed changes
 				29E899A320178C600000BCF3 /* Main.storyboard */,
 				29E899A920178C600000BCF3 /* Assets.xcassets */,
 				29E899AB20178C600000BCF3 /* LaunchScreen.storyboard */,
@@ -147,9 +156,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< Updated upstream
 				293E3DAE2018E42100BB2A5A /* Resnet50.mlmodel in Sources */,
+=======
+				44EC062320195CC100C8AC94 /* Resnet50.mlmodel in Sources */,
+>>>>>>> Stashed changes
 				29E899A220178C600000BCF3 /* ViewController.swift in Sources */,
 				29E899A820178C600000BCF3 /* LittleMe360.xcdatamodeld in Sources */,
+				44EC062120195AE200C8AC94 /* SqueezeNet.mlmodel in Sources */,
 				29E899A020178C600000BCF3 /* AppDelegate.swift in Sources */,
 				293E3DAC2018DAB200BB2A5A /* SqueezeNet.mlmodel in Sources */,
 			);

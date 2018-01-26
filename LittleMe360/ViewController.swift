@@ -13,6 +13,7 @@ import Vision
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
+<<<<<<< Updated upstream
     // FollowMe360 EveryMe360
     
     var resultLabel = UILabel()
@@ -20,6 +21,15 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     override func viewDidLoad() {
         super.viewDidLoad()
         configureResultLabel()
+=======
+    var resultLabel = UILabel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureResultLabel()
+        
+>>>>>>> Stashed changes
         // start up the camera
         
         let captureSession = AVCaptureSession()
@@ -53,6 +63,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         resultLabel.center = self.view.center
         
+<<<<<<< Updated upstream
         resultLabel.font = UIFont(name: "Helvetica", size: 14)
         
         resultLabel.textColor = UIColor(red: 0.039, green: 0.192, blue: 0.259, alpha: 1)
@@ -62,6 +73,19 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         resultLabel.numberOfLines = 2
         
         resultLabel.text = "Test"
+=======
+        resultLabel.layer.zPosition = 1
+        
+        resultLabel.font = UIFont(name: "Helvetica", size: 14)
+        
+        resultLabel.textColor = UIColor(red: 0.039, green: 0.192, blue: 0.259, alpha: 1)
+        
+        resultLabel.lineBreakMode = .byWordWrapping
+        
+        resultLabel.numberOfLines = 2
+        
+        // resultLabel.text = "Test"
+>>>>>>> Stashed changes
         
         resultLabel.backgroundColor = .green
         
@@ -83,6 +107,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         let request = VNCoreMLRequest(model: model) { (finishedReq, error) in
             
+<<<<<<< Updated upstream
             // check the error
             
             print(finishedReq.results!)
@@ -95,13 +120,25 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
         
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+=======
+        // check the error
+            
+        print(finishedReq.results!)
+            
+        guard let results = finishedReq.results as? [VNClassificationObservation] else { return }
+            
+        guard let firstObservation = results.first else { return }
+            
+        print(firstObservation.identifier, firstObservation.confidence)
+>>>>>>> Stashed changes
     }
-
+        
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
